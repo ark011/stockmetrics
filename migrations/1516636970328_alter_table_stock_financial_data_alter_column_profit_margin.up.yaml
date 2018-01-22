@@ -1,0 +1,10 @@
+- args:
+    sql: ALTER TABLE "stock_financial_data" ALTER COLUMN "profit_margin" TYPE numeric;
+  type: run_sql
+- args:
+    sql: ALTER TABLE "stock_financial_data" ALTER COLUMN "profit_margin" DROP DEFAULT;
+  type: run_sql
+- args:
+    sql: ALTER TABLE "stock_financial_data" ALTER COLUMN "profit_margin" DROP NOT
+      NULL;
+  type: run_sql

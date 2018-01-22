@@ -1,0 +1,12 @@
+- args:
+    sql: ALTER TABLE "stock_financial_data" ALTER COLUMN "return_on_common_equity"
+      TYPE numeric;
+  type: run_sql
+- args:
+    sql: ALTER TABLE "stock_financial_data" ALTER COLUMN "return_on_common_equity"
+      DROP DEFAULT;
+  type: run_sql
+- args:
+    sql: ALTER TABLE "stock_financial_data" ALTER COLUMN "return_on_common_equity"
+      DROP NOT NULL;
+  type: run_sql

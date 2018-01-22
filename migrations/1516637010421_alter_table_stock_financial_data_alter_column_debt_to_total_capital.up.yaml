@@ -1,0 +1,12 @@
+- args:
+    sql: ALTER TABLE "stock_financial_data" ALTER COLUMN "debt_to_total_capital" TYPE
+      numeric;
+  type: run_sql
+- args:
+    sql: ALTER TABLE "stock_financial_data" ALTER COLUMN "debt_to_total_capital" DROP
+      DEFAULT;
+  type: run_sql
+- args:
+    sql: ALTER TABLE "stock_financial_data" ALTER COLUMN "debt_to_total_capital" DROP
+      NOT NULL;
+  type: run_sql

@@ -1,0 +1,10 @@
+- args:
+    sql: ALTER TABLE "stock_financial_data" ALTER COLUMN "accounts_payable" TYPE numeric;
+  type: run_sql
+- args:
+    sql: ALTER TABLE "stock_financial_data" ALTER COLUMN "accounts_payable" DROP DEFAULT;
+  type: run_sql
+- args:
+    sql: ALTER TABLE "stock_financial_data" ALTER COLUMN "accounts_payable" DROP NOT
+      NULL;
+  type: run_sql

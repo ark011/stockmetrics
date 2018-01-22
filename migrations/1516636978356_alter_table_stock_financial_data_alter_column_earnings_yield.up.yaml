@@ -1,0 +1,10 @@
+- args:
+    sql: ALTER TABLE "stock_financial_data" ALTER COLUMN "earnings_yield" TYPE numeric;
+  type: run_sql
+- args:
+    sql: ALTER TABLE "stock_financial_data" ALTER COLUMN "earnings_yield" DROP DEFAULT;
+  type: run_sql
+- args:
+    sql: ALTER TABLE "stock_financial_data" ALTER COLUMN "earnings_yield" DROP NOT
+      NULL;
+  type: run_sql

@@ -1,0 +1,9 @@
+- args:
+    sql: ALTER TABLE "stock_financial_data" ALTER COLUMN "net_income" TYPE numeric;
+  type: run_sql
+- args:
+    sql: ALTER TABLE "stock_financial_data" ALTER COLUMN "net_income" DROP DEFAULT;
+  type: run_sql
+- args:
+    sql: ALTER TABLE "stock_financial_data" ALTER COLUMN "net_income" DROP NOT NULL;
+  type: run_sql

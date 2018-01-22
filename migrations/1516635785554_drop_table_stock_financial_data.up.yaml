@@ -1,0 +1,3 @@
+- args:
+    sql: DROP TABLE "stock_financial_data"
+  type: run_sql
