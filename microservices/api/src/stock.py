@@ -438,7 +438,7 @@ def fetch_data():
 	base_url = "https://api.intrinio.com"
 	years = [2016, 2015, 2014]
 
-	sp500 = ['MMM', 'ABT', 'ABBV', 'ACN', 'ATVI', 'AYI', 'ADBE', 'AAP', 'AES', 'AET']
+	sp500 = ['AMG', 'AFL', 'A', 'APD', 'AKAM', 'ALK', 'ALB', 'ALXN', 'ALLE']
 
 	for ticker in sp500:
 

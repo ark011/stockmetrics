@@ -1,18 +1,15 @@
 var express = require('express');
 var app = express();
-var router = express.Router();
 
-var server = require('http').Server(app);
+// Setting a html view engine - Make sure you install consolidate and mustache
+app.engine('html', require('consolidate').mustache);
+app.set('view engine', 'html');
 
-app.get('/', function(req, res) {
-  res.send('Hello World');
-});
 
-// Uncomment to add a new route which returns hello world as a JSON
-app.get('/json', function(req, res) {
-   res.json({
-     message: 'Hello world'
-   })
+//your routes here
+app.get('/', function (req, res) {
+    //res.send("Hello World!");
+    res.render('index.html');
 });
 
 app.listen(8080, function () {
