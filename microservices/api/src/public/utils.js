@@ -1,4 +1,4 @@
-e strict';
+'use strict';
 
 window.chartColors = {
 	red: 'rgb(255, 99, 132)',
