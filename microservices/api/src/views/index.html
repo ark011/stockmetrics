@@ -2,13 +2,84 @@
 
 	<head>
 		<title>Stock Chart...</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
+		<script src="https://github.com/hasura/js-sdk/releases/download/v0.1.4/hasura.min.js"></script>
+		<script src="/utils.js"></script>		
+		<script>
+			$(document).ready(function(){
+				hasura.setProject('alike21');
+				
+				function makeDropdown(data){
+					console.log("Got this data: ");
+					console.log(data);
+					
+					sel = $("#dropdown-select");
+					$.each(data, function(k,v){
+						sel.append('<option value="' + v.stock_name + '">' + v.stock_name + '</option>'); 
+					});
+				
+				}
 
+				hasura.data.query({
+					type:'select',
+					args: {
+						table: 'stocks',
+						columns: ['*']
+					}},
+					(data) => {makeDropdown(data)},
+					(error) => {console.log(error);});
+
+				console.log("Now we get data from the hasura platform");
+
+				$("#dropdown-select").on('change', function(e){
+					var company = $('#dropdown-select').val();
+					console.log(company);
+					hasura.data.query({
+                                        	type:'select',
+                                        	args: {
+                                                	table: 'stocks',
+                                                	columns: ['*', {
+                                                        	name : "financials",
+                                                        	columns : ["*"]
+                                                	}],     
+                                                	where: {
+                                                        	stock_name:company
+                                                	}
+                                        	}},
+                                        	(data) => {console.log(data)},
+                                        	(error) => {console.log(error);}
+					);
+				
+					var ctx = document.getElementById('canvas').getContext('2d');
+					var dataset = {
+                                                label: company,
+                                                backgroundColor: window.chartColors.blue,
+                                                borderColor: window.chartColors.blue,
+                                                data: [
+
+                                                ],
+                                                fill: false,
+                                        }					
+                                	window.myChart = new Chart(ctx, {type:'line',data:{},options:{}});
+                                	console.log("Chart created");
+				
+				});
+
+			});
+		</script>
 	</head>
 
 	<body>
 
 		<h1>Chart will be placed here</h1>
-
+		<canvas id="canvas"></canvas>
+		<select id="dropdown-select">
+			<div id="dropdown-options">
+				<option value="default">Select A Company</option>
+			</div>
+		</select>
+		
 	</body>
 
 </html>
