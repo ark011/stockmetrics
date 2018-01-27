@@ -1,0 +1,38 @@
+- args:
+    permission:
+      columns:
+      - id
+      - year
+      - stock_id
+      - return_on_equity
+      - profit_margin
+      - earnings_yield
+      - pe_ratio
+      - marketcap
+      - current_ratio
+      - quick_ratio
+      - debt_to_equity
+      - return_on_common_equity
+      - debt_to_total_capital
+      - return_on_assets
+      - asset_turnover
+      - accounts_receivable_turnover
+      - inventory_turnover
+      - accounts_payable_turnover
+      - total_revenue
+      - total_gross_profit
+      - earnings_per_share
+      - income_tax_expense
+      - total_assets
+      - total_liabilities
+      - cash_and_equivalents
+      - accounts_receivable
+      - total_current_assets
+      - total_current_liabilities
+      - accounts_payable
+      - retained_earnings
+      - net_income
+      filter: {}
+    role: anonymous
+    table: stock_financial_data
+  type: create_select_permission
