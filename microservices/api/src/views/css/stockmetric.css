@@ -1,0 +1,13 @@
+html {
+    height: 100%;
+}
+
+.row {
+  min-height: 100vh;
+  padding-right: 0px;
+  padding-left: 0px;
+  background-image: linear-gradient(144deg, #0c0016, #8b10ee);
+  background-position: 50% 100%, 0px 0px;
+  background-size: 100%, auto;
+  background-repeat: no-repeat, repeat;
+}

@@ -8,7 +8,6 @@ app.set('view engine', 'html');
 
 //your routes here
 app.get('/', function (req, res) {
-    //res.send("Hello World!");
     res.render('index.html');
 });
 

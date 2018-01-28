@@ -8,6 +8,7 @@
   "author": "Jaison",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^4.0.0",
     "consolidate": "^0.15.0",
     "express": "^4.16.2",
     "mustache": "^2.3.0"

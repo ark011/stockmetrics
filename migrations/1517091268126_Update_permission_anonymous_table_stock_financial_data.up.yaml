@@ -1,0 +1,6 @@
+- args:
+    permission:
+      check: {}
+    role: anonymous
+    table: stock_financial_data
+  type: create_insert_permission
