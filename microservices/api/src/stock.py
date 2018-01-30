@@ -98,7 +98,7 @@ def get_cash_flow_data(base_url,ticker, year):
 
 def get_calculations_data(base_url,ticker, year):
 	request_url = base_url + "/financials/standardized"
-	
+
 	page_number = [1,2]
 
 	json = []
@@ -142,24 +142,6 @@ def get_profit_margin(ticker,year,calculations):
 		financial_data[year]['profit_margin'] = float(profit_margin)
 	except:
 		print ("Profit Margin data is not provided for: " + ticker)
-
-def get_earnings_yield(ticker,year,calculations):
-	try:
-		earnings_yield = calculations['earningsyield']
-		if year not in financial_data:
-			financial_data[year] = {"year" : year}
-		financial_data[year]['earnings_yield'] = float(earnings_yield)
-	except:
-		print ("Earnings Yield data is not provided for: " + ticker)
-
-def get_pe_ratio(ticker,year,calculations):
-	try:
-		pe_ratio = calculations['pricetoearnings']
-		if year not in financial_data:
-			financial_data[year] = {"year" : year}
-		financial_data[year]['pe_ratio'] = float(pe_ratio)
-	except:
-		print ("Price to Earnings data is not provided for: " + ticker)
 
 def get_marketcap(ticker,year,calculations):
 	try:
@@ -233,33 +215,6 @@ def get_asset_turnover(ticker,year,calculations):
 	except:
 		print ("Asset Turnover data is not provided for: " + ticker)
 
-def get_accounts_receivable_turnover(ticker,year,calculations):
-	try:
-		accounts_receivable_turnover = calculations['arturnover']
-		if year not in financial_data:
-			financial_data[year] = {"year" : year}
-		financial_data[year]['accounts_receivable_turnover'] = float(accounts_receivable_turnover)
-	except:
-		print ("Accounts Receivable Turnover data is not provided for: " + ticker)
-
-def get_inventory_turnover(ticker,year,calculations):
-	try:
-		inventory_turnover = calculations['invturnover']
-		if year not in financial_data:
-			financial_data[year] = {"year" : year}
-		financial_data[year]['inventory_turnover'] = float(inventory_turnover)
-	except:
-		print ("Inventory Turnover data is not provided for: " + ticker)
-
-def get_accounts_payable_turnover(ticker,year,calculations):
-	try:
-		accounts_payable_turnover = calculations['apturnover']
-		if year not in financial_data:
-			financial_data[year] = {"year" : year}
-		financial_data[year]['accounts_payable_turnover'] = float(accounts_payable_turnover)
-	except:
-		print ("Accounts Payable Turnover data is not provided for: " + ticker)
-
 def get_total_revenue(ticker,year,income_statement):
 	try:
 		total_revenue = income_statement['totalrevenue']
@@ -322,15 +277,6 @@ def get_cash_and_equivalents(ticker,year,balance_sheet):
 		financial_data[year]['cash_and_equivalents'] = float(cash_and_equivalents)
 	except:
 		print ("Cash & Equivalents data is not provided for: " + ticker)
-
-def get_accounts_receivable(ticker,year,balance_sheet):
-	try:
-		accounts_receivable = balance_sheet['accountsreceivable']
-		if year not in financial_data:
-			financial_data[year] = {"year" : year}
-		financial_data[year]['accounts_receivable'] = float(accounts_receivable)
-	except:
-		print ("Accounts & Receivable data is not provided for: " + ticker)
 
 def get_total_current_assets(ticker,year,balance_sheet):
 	try:
@@ -436,11 +382,10 @@ def fetch_data():
 	calculations = {}
 
 	base_url = "https://api.intrinio.com"
-	years = [2016, 2015, 2014]
+	years = [2016, 2015, 2014, 2013]
 
-	sp500 = ['AMG', 'AFL', 'A', 'APD', 'AKAM', 'ALK', 'ALB', 'ALXN', 'ALLE']
-
-	for ticker in sp500:
+	dow_jones = ['MMM', 'AXP', 'AAPL', 'BA', 'CAT', 'CVX', 'CSCO', 'KO', 'DWDP', 'DIS', 'XOM', 'GE', 'GS', 'HD', 'IBM', 'INCT', 'JNJ', 'JPM', 'MCD', 'MRK', 'MSFT', 'NKE', 'PFE', 'PG', 'TRV', 'UTX', 'UNH', 'VZ', 'V', 'WMT']
+	for ticker in dow_jones:
 
 		#API calls to get the Stock Name and Sector Name
 		get_sector_name(base_url, ticker)
@@ -452,12 +397,10 @@ def fetch_data():
 			get_balance_sheet_data(base_url,ticker,year)
 			get_cash_flow_data(base_url,ticker,year)
 			get_calculations_data(base_url,ticker,year)
-			
+
 			#Function calls to get data from Calculations & Metrics
 			get_return_on_equity(ticker,year,calculations)
 			get_profit_margin(ticker,year,calculations)
-			get_earnings_yield(ticker,year,calculations)
-			get_pe_ratio(ticker,year,calculations)
 			get_marketcap(ticker,year,calculations)
 			get_current_ratio(ticker,year,calculations)
 			get_quick_ratio(ticker,year,calculations)
@@ -466,9 +409,6 @@ def fetch_data():
 			get_debt_to_total_capital(ticker,year,calculations)
 			get_return_on_assets(ticker,year,calculations)
 			get_asset_turnover(ticker,year,calculations)
-			get_accounts_receivable_turnover(ticker,year,calculations)
-			get_inventory_turnover(ticker,year,calculations)
-			get_accounts_payable_turnover(ticker,year,calculations)
 
 			#Function calls to get data from Income Statement
 			get_total_revenue(ticker,year,income_statement)
@@ -480,7 +420,6 @@ def fetch_data():
 			get_total_assets(ticker,year,balance_sheet)
 			get_total_liabilities(ticker,year,balance_sheet)
 			get_cash_and_equivalents(ticker,year,balance_sheet)
-			get_accounts_receivable(ticker,year,balance_sheet)
 			get_total_current_assets(ticker,year,balance_sheet)
 			get_total_current_liabilities(ticker,year,balance_sheet)
 			get_accounts_payable(ticker,year,balance_sheet)
@@ -493,3 +432,7 @@ def fetch_data():
 
 
 fetch_data()
+
+
+
+

@@ -1,0 +1,32 @@
+- args:
+    permission:
+      columns:
+      - stock_id
+      - retained_earnings
+      - net_income
+      - id
+      - year
+      - return_on_equity
+      - profit_margin
+      - marketcap
+      - current_ratio
+      - quick_ratio
+      - debt_to_equity
+      - return_on_common_equity
+      - debt_to_total_capital
+      - return_on_assets
+      - asset_turnover
+      - total_revenue
+      - total_gross_profit
+      - earnings_per_share
+      - income_tax_expense
+      - total_assets
+      - total_liabilities
+      - cash_and_equivalents
+      - total_current_assets
+      - total_current_liabilities
+      - accounts_payable
+      filter: {}
+    role: user
+    table: stock_financial_data
+  type: create_update_permission

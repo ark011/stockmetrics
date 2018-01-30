@@ -1,0 +1,6 @@
+- args:
+    permission:
+      filter: {}
+    role: user
+    table: stocks
+  type: create_delete_permission

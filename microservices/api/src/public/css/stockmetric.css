@@ -1,5 +1,5 @@
 
-dy {
+body {
   background-color: #edeff2;
   font-family: 'Open Sans', sans-serif;
   color: #6a859c;
@@ -183,8 +183,8 @@ p {
   padding-top: 195px;
   padding-bottom: 195px;
   border-bottom: 4px solid #69b9ff;
-  background-image: -webkit-linear-gradient(270deg, rgba(46, 157, 255, .5), rgba(46, 157, 255, .22)), url('../images/photo-1416359658663-73a3834895eb.jpg');
-  background-image: linear-gradient(180deg, rgba(46, 157, 255, .5), rgba(46, 157, 255, .22)), url('../images/photo-1416359658663-73a3834895eb.jpg');
+  background-image: -webkit-linear-gradient(270deg, rgba(46, 157, 255, .5), rgba(46, 157, 255, .22)), url('https://images.pexels.com/photos/241544/pexels-photo-241544.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb');
+  background-image: linear-gradient(180deg, rgba(46, 157, 255, .5), rgba(46, 157, 255, .22)), url('https://images.pexels.com/photos/241544/pexels-photo-241544.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb');
   background-position: 0% 0%, 50% 50%;
   background-size: auto, cover;
   text-align: center;

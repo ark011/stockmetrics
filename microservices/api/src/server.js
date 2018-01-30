@@ -1,10 +1,11 @@
 var express = require('express');
 var app = express();
+var path = require('path');
 
 // Setting a html view engine - Make sure you install consolidate and mustache
 app.engine('html', require('consolidate').mustache);
 app.set('view engine', 'html');
-
+app.use(express.static(path.join(__dirname, 'public')));
 
 //your routes here
 app.get('/', function (req, res) {
