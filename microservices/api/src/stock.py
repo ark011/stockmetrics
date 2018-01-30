@@ -384,8 +384,8 @@ def fetch_data():
 	base_url = "https://api.intrinio.com"
 	years = [2016, 2015, 2014, 2013]
 
-	dow_jones = ['MMM', 'AXP', 'AAPL', 'BA', 'CAT', 'CVX', 'CSCO', 'KO', 'DWDP', 'DIS', 'XOM', 'GE', 'GS', 'HD', 'IBM', 'INCT', 'JNJ', 'JPM', 'MCD', 'MRK', 'MSFT', 'NKE', 'PFE', 'PG', 'TRV', 'UTX', 'UNH', 'VZ', 'V', 'WMT']
-	for ticker in dow_jones:
+	dow_jones = ['MMM', 'AXP', 'AAPL', 'BA', 'CAT', 'CVX', 'CSCO', 'KO', 'DWDP', 'DIS', 'XOM', 'GE', 'GS', 'HD', 'IBM',  'JNJ', 'JPM', 'MCD', 'MRK', 'MSFT', 'NKE', 'PFE', 'PG', 'TRV', 'UTX', 'UNH', 'VZ', 'V', 'WMT']
+        for ticker in dow_jones:
 
 		#API calls to get the Stock Name and Sector Name
 		get_sector_name(base_url, ticker)
