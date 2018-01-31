@@ -1,0 +1,4 @@
+- args:
+    role: anonymous
+    table: stock_financial_data
+  type: drop_select_permission

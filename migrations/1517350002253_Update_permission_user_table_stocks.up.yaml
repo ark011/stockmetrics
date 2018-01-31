@@ -1,0 +1,11 @@
+- args:
+    role: user
+    table: stocks
+  type: drop_select_permission
+- args:
+    permission:
+      columns: []
+      filter: {}
+    role: user
+    table: stocks
+  type: create_select_permission

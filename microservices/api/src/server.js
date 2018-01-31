@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var numeral = require('numeral');
 
 // Setting a html view engine - Make sure you install consolidate and mustache
 app.engine('html', require('consolidate').mustache);

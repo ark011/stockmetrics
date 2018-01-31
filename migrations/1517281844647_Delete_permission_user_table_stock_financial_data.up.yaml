@@ -1,0 +1,4 @@
+- args:
+    role: user
+    table: stock_financial_data
+  type: drop_delete_permission
