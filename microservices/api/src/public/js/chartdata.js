@@ -44,7 +44,8 @@ $(document).ready(function(){
                                         sector_name:sector
                                 }
                         }},
-                        (data) => {drawRevenueChart(data);
+                        (data) => {
+                                    drawRevenueChart(data);
                                     drawTotalGrossProfitChart(data);
                                     drawNetIncomeChart(data);
                                     drawProfitMarginChart(data);
@@ -639,7 +640,7 @@ $(document).ready(function(){
                                 responsive: false,
                                 title:{
                                         display:true,
-                                        text: sectors[0].sector_name + ' Marketcap'
+                                        text: sectors[0].sector_name + ' Market Cap'
                                 },
                                 tooltips: {
                                         mode: 'index',
@@ -671,7 +672,7 @@ $(document).ready(function(){
                                                 display: true,
                                                 scaleLabel: {
                                                         display: true,
-                                                        labelString: ' Marketcap'
+                                                        labelString: ' Market Cap'
                                                 }
                                         }]
                                 }
