@@ -1,0 +1,14 @@
+- args:
+    role: anonymous
+    table: stocks
+  type: drop_update_permission
+- args:
+    permission:
+      columns:
+      - stock_name
+      - sector_name
+      - id
+      filter: {}
+    role: anonymous
+    table: stocks
+  type: create_update_permission
