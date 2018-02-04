@@ -1,0 +1,4 @@
+- args:
+    relationship: financials
+    table: stocks
+  type: drop_relationship
