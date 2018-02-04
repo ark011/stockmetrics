@@ -13,8 +13,7 @@
 
 stockmetrics.us:
    ssl:
-       conf: 
-       account: you@youremail.com
+       conf: {}
     type: LetsEncrypt
 
 # Example configurtaion for a domain without SSL
