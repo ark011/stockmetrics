@@ -11,13 +11,13 @@
 # Point your own domain to the IP of the cluster and add the domain here
 # Example configuration for domain with free SSL certs from LetsEncypt
 #
-stockmetrics.us:
-   ssl:
-     type: LetsEncrypt
-     conf:
-         acount: info@stockmetrics.us
+#stockmetrics.us:
+#   ssl:
+#     type: LetsEncrypt
+#     conf:
+#         acount: info@stockmetrics.us
 
 # Example configurtaion for a domain without SSL
 #
-# example-domain.com:
-#   ssl: null
+stockmetrics.us:
+   ssl: null
