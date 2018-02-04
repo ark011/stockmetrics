@@ -1,0 +1,10 @@
+- args:
+    permission:
+      columns:
+      - stock_name
+      - sector_name
+      - id
+      filter: {}
+    role: anonymous
+    table: stocks
+  type: create_select_permission
