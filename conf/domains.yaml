@@ -15,7 +15,7 @@ stockmetrics.us:
     ssl:
         conf:
             account: getstarteduser@hasura.io
-        type: LetsEncrpyt
+        type: LetsEncrypt
 
 
 # Example configurtaion for a domain without SSL
