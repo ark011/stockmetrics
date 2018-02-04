@@ -12,9 +12,10 @@
 #
 
 stockmetrics.us:
-   ssl:
-       conf: {}
-    type: LetsEncrypt
+    ssl:
+        type: LetsEncrypt
+        conf: {}
+
 
 # Example configurtaion for a domain without SSL
 #
