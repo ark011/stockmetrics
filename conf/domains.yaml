@@ -12,7 +12,10 @@
 #
 
 stockmetrics.us:
-    ssl: null
+    ssl:
+        conf:
+            account: getstarteduser@hasura.io
+        type: LetsEncrpyt
 
 
 # Example configurtaion for a domain without SSL
