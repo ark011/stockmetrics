@@ -1,0 +1,17 @@
+- args:
+    sql: CREATE TABLE "stock_financial_data"("id" serial NOT NULL, "year" integer
+      NOT NULL, "stock_id" integer NOT NULL, "return_on_equity" numeric NOT NULL,
+      "profit_margin" numeric NOT NULL, "marketcap" numeric NOT NULL, "current_ratio"
+      numeric NOT NULL, "quick_ratio" numeric NOT NULL, "debt_to_equity" numeric NOT
+      NULL, "return_on_common_equity" numeric NOT NULL, "debt_to_total_capital" numeric
+      NOT NULL, "return_on_assets" numeric NOT NULL, "asset_turnover" numeric NOT
+      NULL, "total_revenue" numeric NOT NULL, "total_gross_profit" numeric NOT NULL,
+      "earnings_per_share" numeric NOT NULL, "income_tax_expense" numeric NOT NULL,
+      "total_assets" numeric NOT NULL, "total_liabilities" numeric NOT NULL, "cash_and_equivalents"
+      numeric NOT NULL, "total_current_assets" numeric NOT NULL, "total_current_liabilities"
+      numeric NOT NULL, "accounts_payable" numeric NOT NULL, "retained_earnings" numeric
+      NOT NULL, "net_income" numeric NOT NULL, PRIMARY KEY ("id") )
+  type: run_sql
+- args:
+    name: stock_financial_data
+  type: add_existing_table_or_view
