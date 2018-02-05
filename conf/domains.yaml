@@ -20,4 +20,6 @@
 # Example configurtaion for a domain without SSL
 #
 stockmetrics.us:
-   ssl: null
+   ssl:
+       type: LetsEncrypt
+       conf: {}
