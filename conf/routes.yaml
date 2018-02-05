@@ -163,7 +163,7 @@ notify:
   /:
     corsPolicy: allow_all
     upstreamService:
-      name: app
+      name: api
       namespace: '{{ cluster.metadata.namespaces.user }}'
     upstreamServicePath: /
     upstreamServicePort: 80
