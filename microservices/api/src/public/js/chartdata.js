@@ -53,8 +53,6 @@ $(document).ready(function(){
                                     drawDebtToTotalCapital(data);
                                     drawEarningsPerShare(data);
                                     drawMarketcap(data);
-                                    drawTotalAssets(data);
-                                    drawTotalLiabilities(data);
                         },
                         (error) => {console.log(error);}
                 );
