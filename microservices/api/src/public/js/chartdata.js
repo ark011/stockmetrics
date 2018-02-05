@@ -26,7 +26,7 @@ $(document).ready(function(){
                 (data) => {makeDropdown(data)},
                 (error) => {console.log(error);});
 
-                console.log("Now we get data from the hasura platform");
+                console.log("Getting data from database... ");
 
                 $("#dropdown-field").on('change', function(e){
                 var sector = $('#dropdown-field').val();
