@@ -159,19 +159,11 @@ notify:
     upstreamServicePath: /
     upstreamServicePort: 80
     corsPolicy: allow_all
-api:
+www:
   /:
     corsPolicy: allow_all
     upstreamService:
-      name: api
+      name: www
       namespace: '{{ cluster.metadata.namespaces.user }}'
     upstreamServicePath: /
     upstreamServicePort: 80
-www:
-    /:
-        corsPolicy: allow_all
-        upstreamService:
-            name: www
-            namespace: '{{ cluster.metadata.namescpaces.user }}'
-        upstreamServicePath: /
-        upstreamServicePort: 80
