@@ -3,15 +3,15 @@ import json
 import math
 
 #API Keys
-api_username = 'eb87cd0b0cb5a9fcbf0cfcc181731640'
-api_password = '368a1ba4a933eee17d024de2036e0592'
+api_username = '<KEY>'
+api_password = '<KEY>'
 
 print("Starting script....")
 
 stock_data = {}
 financial_data = {}
-project_url = "https://data.alike21.hasura-app.io/"
-headers = {"Content-Type":"application/json", "Authorization":"Bearer 8f699fab753a3163cbb056cc2a3e6f9e22c05d8f125d5a1a"}
+project_url = "<PROJECT_URL>"
+headers = {"Content-Type":"application/json", "Authorization":"Bearer <KEY>"}
 
 def get_sector_name(base_url, ticker):
 	request_url = base_url + "/data_point?"
